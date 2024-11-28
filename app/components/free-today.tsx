@@ -6,7 +6,9 @@ export default function FreeTodaySection({ popular }: { popular: Giveaway[] }) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-5xl font-extrabold">// Free Games Today</h1>
+        <h1 className="text-2xl font-extrabold uppercase">
+          <span className="text-secondary mr-2">//</span> Free Today
+        </h1>
         {/* <Button as={Link} color="primary" radius="sm" href="/new">
             View all
           </Button> */}
@@ -20,11 +22,11 @@ export default function FreeTodaySection({ popular }: { popular: Giveaway[] }) {
             <Card
               key={giveaway.id}
               radius="none"
-              className="relative border-none group w-full aspect-video"
+              className="relative border-none group w-full aspect-[16/8]"
             >
               <img
                 alt="Woman listing to music"
-                className="object-cover h-full w-full"
+                className="object-fill h-full w-full"
                 src={giveaway.image}
               />
 
@@ -64,7 +66,7 @@ export default function FreeTodaySection({ popular }: { popular: Giveaway[] }) {
 // Helper function to get the description of the giveaway
 
 function getDescription(description: string) {
-  const maxDescriptionLength = 100;
+  const maxDescriptionLength = 70;
   return description.split("!")[1].length > maxDescriptionLength
     ? `${description.split("!")[1].slice(0, maxDescriptionLength)}...`
     : description.split("!")[1];
