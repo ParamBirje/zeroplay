@@ -21,7 +21,7 @@ export default function Banner() {
     <div
       className={`${
         isMenuOpen ? "flex" : "hidden"
-      } w-full items-center gap-x-3 border-b-1 border-divider bg-background/[0.15] px-6 py-2 backdrop-blur-xl sm:px-3.5 sm:before:flex-1`}
+      } w-full flex-col md:flex-row gap-3 md:items-center gap-x-3 border-b-1 border-divider bg-background/[0.15] px-6 py-2 backdrop-blur-xl sm:px-3.5 sm:before:flex-1`}
     >
       <p className="text-small text-foreground">
         <Link className="text-inherit" href="#">
@@ -48,7 +48,7 @@ export default function Banner() {
         }}
         variant="bordered"
       >
-        Learn how to
+        Learn how
       </Button>
       <div className="flex flex-1 justify-end">
         <Button
