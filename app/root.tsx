@@ -11,6 +11,7 @@ import "./tailwind.css";
 import Providers from "./components/providers";
 import Appbar from "./components/appbar";
 import Banner from "./components/banner";
+import Footer from "./components/footer";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -49,6 +50,7 @@ export default function App() {
       <Banner />
       <Appbar />
       <Outlet />
+      <Footer />
     </Providers>
   );
 }

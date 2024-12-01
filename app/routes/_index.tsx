@@ -26,7 +26,7 @@ export default function Index() {
   const { popular } = useLoaderData<typeof loader>();
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16 flex flex-col gap-16">
+    <main className="max-w-5xl mx-auto px-6 py-16 flex flex-col gap-16 min-h-screen">
       <Clock />
       <BrowserSearch />
       <FreeTodaySection popular={popular} />

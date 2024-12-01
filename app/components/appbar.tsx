@@ -16,7 +16,12 @@ import { ThemeSwitch } from "./theme-switch";
 export default function Appbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
-  const menuItems = ["All Platforms", "Steam", "Epic Games", "PlayStation"];
+  const menuItems = [
+    {
+      label: "All Platforms",
+      href: "/",
+    },
+  ];
 
   return (
     <Navbar onMenuOpenChange={setIsMenuOpen}>
@@ -33,9 +38,9 @@ export default function Appbar() {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         {menuItems.map((item, index) => (
-          <NavbarItem key={`${item}-${index}`}>
-            <Link color="foreground" href="#">
-              {item}
+          <NavbarItem key={`${item.label}-${index}`}>
+            <Link color="foreground" href={item.href}>
+              {item.label}
             </Link>
           </NavbarItem>
         ))}
@@ -61,20 +66,14 @@ export default function Appbar() {
       </NavbarContent>
       <NavbarMenu>
         {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
+          <NavbarMenuItem key={`${item.label}-${index}`}>
             <Link
-              color={
-                index === 2
-                  ? "primary"
-                  : index === menuItems.length - 1
-                  ? "danger"
-                  : "foreground"
-              }
+              color={"foreground"}
               className="w-full"
-              href="#"
+              href={item.href}
               size="lg"
             >
-              {item}
+              {item.label}
             </Link>
           </NavbarMenuItem>
         ))}
