@@ -34,7 +34,6 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body className="min-h-screen bg-background">
-        <Appbar />
         {children}
         <ScrollRestoration />
         <Scripts />
@@ -46,6 +45,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <Providers>
+      <Appbar />
       <Outlet />
     </Providers>
   );

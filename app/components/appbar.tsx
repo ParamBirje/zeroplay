@@ -11,6 +11,7 @@ import {
   Button,
 } from "@nextui-org/react";
 import { GamepadIcon, StarIcon } from "lucide-react";
+import { ThemeSwitch } from "./theme-switch";
 
 export default function Appbar() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -40,6 +41,9 @@ export default function Appbar() {
         ))}
       </NavbarContent>
       <NavbarContent justify="end">
+        <NavbarItem>
+          <ThemeSwitch />
+        </NavbarItem>
         <NavbarItem>
           <Button
             startContent={
