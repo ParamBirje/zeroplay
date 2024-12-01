@@ -10,6 +10,7 @@ import type { LinksFunction } from "@remix-run/node";
 import "./tailwind.css";
 import Providers from "./components/providers";
 import Appbar from "./components/appbar";
+import Banner from "./components/banner";
 
 export const links: LinksFunction = () => [
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
@@ -45,6 +46,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
 export default function App() {
   return (
     <Providers>
+      <Banner />
       <Appbar />
       <Outlet />
     </Providers>
