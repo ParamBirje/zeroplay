@@ -67,7 +67,7 @@ export default function FreeTodaySection({ popular }: { popular: Giveaway[] }) {
 
 function getDescription(description: string) {
   const maxDescriptionLength = 70;
-  return description.split("!")[1].length > maxDescriptionLength
-    ? `${description.split("!")[1].slice(0, maxDescriptionLength)}...`
+  return description.length > maxDescriptionLength
+    ? `${description.slice(0, maxDescriptionLength)}...`
     : description.split("!")[1];
 }
