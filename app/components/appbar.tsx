@@ -56,9 +56,10 @@ export default function Appbar() {
             }
             as={Link}
             color="primary"
-            href="#"
+            href="https://github.com/parambirje/zeroplay"
             variant="flat"
             radius="sm"
+            isExternal
           >
             Star
           </Button>
