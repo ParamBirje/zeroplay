@@ -26,7 +26,7 @@ export default function Footer() {
 
         <div className="flex items-center gap-2">
           Made with <HeartIcon fill="red" size={16} /> by{" "}
-          <Link isExternal href="https://parameater.co">
+          <Link isExternal href="https://parambirje.com">
             Param Birje.
           </Link>
         </div>
