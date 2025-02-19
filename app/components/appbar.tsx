@@ -24,7 +24,7 @@ export default function Appbar() {
   ];
 
   return (
-    <Navbar onMenuOpenChange={setIsMenuOpen}>
+    <Navbar className="bg-background/10" onMenuOpenChange={setIsMenuOpen}>
       <NavbarContent>
         <NavbarMenuToggle
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
@@ -46,9 +46,9 @@ export default function Appbar() {
         ))}
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem>
-          <ThemeSwitch />
-        </NavbarItem>
+        {/* <NavbarItem> */}
+        {/*   <ThemeSwitch /> */}
+        {/* </NavbarItem> */}
         <NavbarItem>
           <Button
             startContent={

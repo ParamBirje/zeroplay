@@ -6,7 +6,7 @@ export default function FreeTodaySection({ popular }: { popular: Giveaway[] }) {
   return (
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between">
-        <h1 className="text-2xl font-extrabold uppercase">
+        <h1 className="z-10 text-2xl font-extrabold uppercase">
           <span className="text-secondary mr-2">//</span> Free Today
         </h1>
         {/* <Button as={Link} color="primary" radius="sm" href="/new">
@@ -22,7 +22,7 @@ export default function FreeTodaySection({ popular }: { popular: Giveaway[] }) {
             <Card
               key={giveaway.id}
               radius="none"
-              className="relative border-none group w-full aspect-[16/8]"
+              className="relative border-none group w-full aspect-[16/8] hover:scale-110 hover:z-10"
             >
               <img
                 alt="Woman listing to music"
@@ -34,7 +34,7 @@ export default function FreeTodaySection({ popular }: { popular: Giveaway[] }) {
                 <p className="text-sm">{description}</p>
 
                 <div className="flex flex-wrap items-center gap-2">
-                  <p className="font-bold">$2.30</p>
+                  <p className="font-bold line-through">$2.30</p>
                   {giveaway.platforms.split(",").map((platform) => (
                     <Chip size="sm" key={platform}>
                       {platform.trim()}

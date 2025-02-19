@@ -31,6 +31,7 @@ export default function Banner() {
       <Button
         isExternal
         as={Link}
+        radius="sm"
         className="group relative h-9 overflow-hidden bg-transparent text-small font-normal"
         color="default"
         endContent={

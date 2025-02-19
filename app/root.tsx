@@ -48,9 +48,17 @@ export default function App() {
   return (
     <Providers>
       <Banner />
-      <Appbar />
-      <Outlet />
-      <Footer />
+
+      <div className="relative min-h-screen">
+        <img
+          alt="background-gradient"
+          src="https://i.postimg.cc/0rR21XJP/zeroplay.png"
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        />
+        <Appbar />
+        <Outlet />
+        <Footer />
+      </div>
     </Providers>
   );
 }

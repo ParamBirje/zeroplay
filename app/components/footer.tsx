@@ -6,7 +6,7 @@ import { HeartIcon, MonitorIcon, SunIcon } from "lucide-react";
 export default function Footer() {
   return (
     <Navbar
-      className="py-4 px-4 bg-default-100"
+      className="py-4 px-4 bg-background/20"
       maxWidth="lg"
       position="static"
     >

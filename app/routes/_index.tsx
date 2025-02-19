@@ -1,3 +1,4 @@
+import { Image } from "@nextui-org/react";
 import type { MetaFunction } from "@remix-run/node";
 import { useLoaderData } from "@remix-run/react";
 import BrowserSearch from "~/components/browser-search";
@@ -7,7 +8,7 @@ import { Giveaway } from "~/types";
 
 export const meta: MetaFunction = () => {
   return [
-    { title: "ZeroPlay - Official Free Games" },
+    { title: "ZeroPlay - Limited Time Forever Free Games" },
     {
       name: "description",
       content:
@@ -25,7 +26,7 @@ export default function Index() {
   const { popular } = useLoaderData<typeof loader>();
 
   return (
-    <main className="max-w-5xl mx-auto px-6 py-16 flex flex-col gap-16 min-h-screen">
+    <main className="z-5 max-w-5xl mx-auto px-6 py-16 flex flex-col gap-16">
       {/* <Clock /> */}
       <BrowserSearch />
       <FreeTodaySection popular={popular} />
